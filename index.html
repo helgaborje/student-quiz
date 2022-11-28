@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>28-workshop-guess-the-number-dom-edition</title>
+    <title>Student Quiz</title>
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,18 +20,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="wrapper p-3 bg-light">
+<body class="p-3 bg-light" id="body-wrapper">
     <!-- Header -->
     <header>
-        <div class="container bg-light text-center mb-2 mt-3">
+        <div class="bg-light text-center mb-2 mt-3" id="h1-container">
             <div id="header">
                 <h1>Guess the student</h1>
             </div>
-    </header>
-    <!-- Choose number of students 10 / 20 / all students -->
-    <div class="btn btn-outline-primary" id="button-wrapper">
 
-    </div>
+            <!-- Choose number of students 10 / 20 / all students -->
+            <div class="" id="button-container">
+                <button type="button" class="btn col-8" id="button-10-students"></button>
+                <button type="button" class="btn col-8" id="button-20-students"></button>
+                <button type="button" class="btn col-8" id="button-all-students"></button>
+            </div>
+        </div>
+    </header>
 
     <div class="row d-flex justify-content-center" id="quiz-container">
 
@@ -40,14 +44,14 @@
             <img src="" class="img-fluid" id="image-student" alt="">
         </div>
 
-
-        <!-- Buttons with names to guess -->
+        <!-- Creating buttons in js with names to guess -->
         <div class=" col-8 col-md-6 d-flex justify-content-center" id="button-wrapper">
             <div class="col-10 flex-column d-flex justify-content-center" id="button-container">
 
             </div>
         </div>
     </div>
+
     <!-- Scripts -->
     <script src="students.js"></script>
     <script src="script.js"></script>

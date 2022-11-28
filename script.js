@@ -1,4 +1,6 @@
-const btnStart = document.querySelector('#button-wrapper');
+const buttonTenStudents = document.querySelector('#button-10-students');
+const buttonTwentyStudents = document.querySelector('#button-20-students');
+const buttonAllStudents = document.querySelector('#button-all-students');
 const imgContainer = document.querySelector('#image-container');
 const imageStudent = document.querySelector('#image-student');
 const buttonNames = document.querySelector('#button-container');
@@ -14,14 +16,28 @@ const shuffleArray = (array) => {
 		array[i] = array[j];
 		array[j] = temp;
 	}
-}
+};
+
+//start the quiz, do you want to quiz with 10, 20 or all the students? button choices
+/* buttonTenStudents.addEventListener('click', (e)) => {
+	if 
+	
+
+}; */
+buttonTenStudents.innerHTML += `<button class="btn btn-outline-primary">10 students?</button>`;
+buttonTwentyStudents.innerHTML += `<button class="btn btn-outline-primary">20 students?</button>`;
+buttonAllStudents.innerHTML += `<button class="btn btn-outline-primary">All students?</button>`;
+
+
+
+
 
 
 // choose how many students, 10 / 20 / all
 //buttons
 
 // shuffle array of students
-shuffleArray(students);
+/* shuffleArray(students);
 console.log("shuffleing students:", students);
 
 // slice in 10
@@ -31,7 +47,7 @@ console.log("slicing students", tenStudents);
 // slice in 20
 const twentyStudents = students.slice(1, 21);
 console.log("slicing students", twentyStudents);
-
+ */
 // get random student
 /* const getRandomStudent = students[Math.floor(Math.random() * students.length)];
 console.log(getRandomStudent); */
@@ -55,11 +71,3 @@ console.log("three names", randomStudentNames); */
 // show right or wrong answer
 
 // show result, how many right guesses
-
-
-// 
-const getRandomStudent = () => {
-
-};
-
-getRandomStudent();
