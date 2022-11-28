@@ -3,10 +3,11 @@ const buttonTwentyStudents = document.querySelector('#button-20-students');
 const buttonAllStudents = document.querySelector('#button-all-students');
 const imgContainer = document.querySelector('#image-container');
 const imageStudent = document.querySelector('#image-student');
+const buttonStart = document.querySelector('#button-start-container');
 const buttonNames = document.querySelector('#button-container');
 const quizContainer = document.querySelector('#quiz-container');
 
-
+//let numberOfGuesse = 0;
 
 // function to shuffle the students
 const shuffleArray = (array) => {
@@ -18,16 +19,38 @@ const shuffleArray = (array) => {
 	}
 };
 
+buttonTenStudents.innerHTML += `<button class="btn col-8 col-md-6 btn-outline-primary">10 students?</button>`;
+buttonTwentyStudents.innerHTML += `<button class="btn col-8 col-md-6 btn-outline-primary">20 students?</button>`;
+buttonAllStudents.innerHTML += `<button class="btn col-8 col-md-6 btn-outline-primary">All students?</button>`;
+
+
+
+//function to get a random student and 3 other names 
+const getRandomStudent = () => {
+	//calling the fuction to shuffle the students
+	shuffleArray(students); 
+	//slicing out 4 students and putting them in 'randomStudents'
+	const randomStudents = students.slice(0, 4); 
+	//setting the student on index 0 to be the 'correctStudent'
+	correctStudent = students[0]; 
+	//image of the student
+	imageStudent.setAttribute('src', correctStudent.image);
+	//shuffeling the 4 'randomStudents'
+	shuffleArray(randomStudents); 
+	//using map() to pick out the 4 names that are saved in 'randomStudents', to a new const named 'randomNames' 
+	const randomNames = randomStudents.map(students => students.name); 
+	//adding a button for every name/student in randomNames
+	randomNames.forEach(student => {
+		buttonNames.innerHTML += `<button class="btn btn-outline-primary my-2">${student}</button>`;
+	});
+
+};
+
+
 //start the quiz, do you want to quiz with 10, 20 or all the students? button choices
-/* buttonTenStudents.addEventListener('click', (e)) => {
-	if 
-	
 
-}; */
-buttonTenStudents.innerHTML += `<button class="btn btn-outline-primary">10 students?</button>`;
-buttonTwentyStudents.innerHTML += `<button class="btn btn-outline-primary">20 students?</button>`;
-buttonAllStudents.innerHTML += `<button class="btn btn-outline-primary">All students?</button>`;
-
+//calling the function to get a random student
+//getRandomStudent();
 
 
 
@@ -71,3 +94,8 @@ console.log("three names", randomStudentNames); */
 // show right or wrong answer
 
 // show result, how many right guesses
+
+
+
+
+
