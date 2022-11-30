@@ -1,6 +1,6 @@
-const buttonTenStudents = document.querySelector('#button-10-students');
+/* const buttonTenStudents = document.querySelector('#button-10-students');
 const buttonTwentyStudents = document.querySelector('#button-20-students');
-const buttonAllStudents = document.querySelector('#button-all-students');
+const buttonAllStudents = document.querySelector('#button-all-students'); */
 const imgContainer = document.querySelector('#image-container');
 const imageStudent = document.querySelector('#image-student');
 const buttonStart = document.querySelector('#button-start-container');
@@ -18,9 +18,12 @@ const shuffleArray = (array) => {
 	}
 };
 
-buttonTenStudents.innerHTML += `<button class="btn col-8 col-md-6 btn-light">10 students</button>`;
-buttonTwentyStudents.innerHTML += `<button class="btn col-8 col-md-6 btn-light">20 students</button>`;
-buttonAllStudents.innerHTML += `<button class="btn col-8 col-md-6 btn-light">All students</button>`;
+
+document.querySelector('#button-start-container').innerHTML = `
+<button type="button" class="btn my-2 col-8 col-md-6 btn-light" id="button-10-students">10 students</button>
+<button type="button" class="btn my-2 col-8 col-md-6 btn-light" id="button-20-students">20 students</button>
+<button type="button" class="btn my-2 col-8 col-md-6 btn-light" id="button-all-students">All students</button>
+`
 
 
 
@@ -48,7 +51,7 @@ const getRandomStudent = () => {
 
 
 // button, start quiz with 10 students
-buttonTenStudents.addEventListener('click', () => {
+document.querySelector('#button-10-students').addEventListener('click', () => {
 	//hide buttons
 	buttonStart.style.display = 'none';
 	//call the function to get a random student and three random names
@@ -58,8 +61,10 @@ buttonTenStudents.addEventListener('click', () => {
 	console.log(tenStudents.length);
 });
 
+
+
 // button, start quiz with 20 students
-buttonTwentyStudents.addEventListener('click', () => {
+document.querySelector('#button-20-students').addEventListener('click', () => {
 	//hide buttons
 	buttonStart.style.display = 'none';
 	//call the function to get a random student and three random names
@@ -70,7 +75,7 @@ buttonTwentyStudents.addEventListener('click', () => {
 });
 
 // button, start quiz with all students
-buttonAllStudents.addEventListener('click', () => {
+document.querySelector('#button-all-students').addEventListener('click', () => {
 	buttonStart.style.display = 'none';
 	//call the function to get a random student and three random names
 	getRandomStudent();
