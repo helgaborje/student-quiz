@@ -3,3 +3,7 @@ body {
     font-weight: 700;
     background-color: rgb(247, 230, 211);
 }
+
+.hide {
+    display: none;
+}
