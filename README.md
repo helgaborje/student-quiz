@@ -1,2 +1,2 @@
 # student-quiz
-Assignment in the course JavaScript, "quess the classmate".
+Assignment in the course JavaScript, "guess the classmate".
