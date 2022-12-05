@@ -24,10 +24,10 @@ const shuffleArray = (array) => {
 
 // adding start buttons
 document.querySelector('#button-start-container').innerHTML = `
-<button type="button" class="btn my-2 col-8 col-md-6 btn-light" id="button-10-students">10 students</button>
-<button type="button" class="btn my-2 col-8 col-md-6 btn-light" id="button-20-students">20 students</button>
-<button type="button" class="btn my-2 col-8 col-md-6 btn-light" id="button-all-students">All students</button>
-`
+<button type="button" class="btn my-2 col-8 col-md-6 col-lg-3 btn-light" id="button-10-students">10 students</button>
+<button type="button" class="btn my-2 col-8 col-md-6 col-lg-3 btn-light" id="button-20-students">20 students</button>
+<button type="button" class="btn my-2 col-8 col-md-6 col-lg-3 btn-light" id="button-all-students">All students</button>
+`;
 
 let numGuesses = 0;
 let currentStudents;

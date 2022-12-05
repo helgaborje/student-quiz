@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="p-3" id="body-wrapper">
+<body class="p-3 " id="body-wrapper">
+
     <!-- Header -->
     <header>
         <div class="text-center mb-2 mt-3" id="h1-container">
@@ -28,20 +29,22 @@
                 <h1>Guess the student</h1>
             </div>
 
-            <!-- Choose number of students 10 / 20 / all students -->
+            <!-- Buttons (created in js) to choose number of students to guess on: 10 / 20 / all students -->
             <div class="" id="button-start-container"></div>
+
         </div>
     </header>
 
+    <!-- Container for showing the result -->
     <div class="col d-flex justify-content-center" id="result-container">
         <div class="" id="show-result"></div>
     </div>
 
+    <!-- Container for the quiz -->
     <div class="row d-flex justify-content-center" id="quiz-container">
 
-
         <!-- Image of student -->
-        <div class="col-8 col-md-6" id="image-container">
+        <div class="col-6 col-md-4 col-lg-3" id="image-container">
             <img src="" class="img-fluid" id="image-student" alt="">
         </div>
 
@@ -50,6 +53,7 @@
             <div class="col-10 flex-column d-flex justify-content-center" id="button-container"></div>
         </div>
 
+        <!-- Showing numbers of correct guesses while playing -->
         <div class="col-8 col-md-6 d-flex justify-content-center" id="result"></div>
 
     </div>
